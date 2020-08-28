@@ -24,7 +24,7 @@ This sample use [Model Derivative API](https://developer.autodesk.com/en/docs/mo
 
 ## Live version
 
-See it live at [forgegoogledriveviewer.herokuapp.com](http://forgegoogledriveviewer.herokuapp.com/).
+See it live at [designdataviewer.herokuapp.com](http://designdataviewer.herokuapp.com/).
 
 ## Industry background
 
