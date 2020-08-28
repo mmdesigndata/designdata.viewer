@@ -1,33 +1,33 @@
 {
-  "name": "model.derivative-gdrive.viewer",
-  "description": "Transparent use of Model Derivative to view Box compatible files.",
-  "repository": "https://github.com/autodesk-forge/model.derivative-nodejs-google.drive.viewer",
-  "logo": "https://avatars0.githubusercontent.com/u/8017462?v=3&s=200",
-  "keywords": [
-    "express",
-    "framework",
-    "autodesk",
-    "forge",
-    "template"
-  ],
-  "env": {
-    "FORGE_CLIENT_ID": {
-      "description": "Forge Client ID"
+    "name": "designdata3dviewer",
+    "description": "Transparent use of Model Derivative to view Box compatible files.",
+    "repository": "https://github.com/mmdesigndata/designdata.viewer",
+    "logo": "",
+    "keywords": [
+        "express",
+        "framework",
+        "autodesk",
+        "forge",
+        "template"
+    ],
+    "env": {
+        "FORGE_CLIENT_ID": {
+            "description": "kradjTUETzlqpftcuO16INLLHREfRQ6y&"
+        },
+        "FORGE_CLIENT_SECRET": {
+            "description": "PMnb4aJtMBpw9bag&"
+        },
+        "GOOGLE_CLIENT_ID": {
+            "description": "734743736244-e07rl03oa9t9tt1p7n3l2d9p45h9m4jg.apps.googleusercontent.com"
+        },
+        "GOOGLE_CLIENT_SECRET": {
+            "description": "EhInBAF6tzEaxt2vVo4EHYlT"
+        },
+        "GOOGLE_CALLBACK_URL": {
+            "description": "Redirect URI of your Google app, required for 3-legged OAuth",
+            "value": "https://designdata3dviewer.herokuapp.com/api/google/callback/oauth"
+        }
     },
-    "FORGE_CLIENT_SECRET": {
-      "description": "Forge Client Secret"
-    },
-    "GOOGLE_CLIENT_ID": {
-      "description": "Google Client ID"
-    },
-    "GOOGLE_CLIENT_SECRET": {
-      "description": "Google Client Secret"
-    },
-    "GOOGLE_CALLBACK_URL": {
-      "description": "Redirect URI of your Google app, required for 3-legged OAuth",
-      "value": "https://<<YOUR HEROKU APP NAME HERE>>.herokuapp.com/api/google/callback/oauth"
-    }
-  },
-  "website": "https://developer.autodesk.com/",
-  "success_url": "/"
+    "website": "https://viewer.cad.parts/",
+    "success_url": "/"
 }
