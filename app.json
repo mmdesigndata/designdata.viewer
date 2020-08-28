@@ -29,5 +29,5 @@
         }
     },
     "website": "https://viewer.cad.parts/",
-    "success_url": "https://viewer.cad.parts/"
+    "success_url": "/"
 }

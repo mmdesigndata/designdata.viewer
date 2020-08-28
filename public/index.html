@@ -9,25 +9,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/jstree.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
     <!-- Autodesk Forge Viewer files -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
     <!-- this project main script -->
     <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script language="JavaScript" src="/js/ForgeViewer.js"></script>
+    <script language="JavaScript" src="/js/ForgeViewer.js">
+    </script>
     <script language="JavaScript" src="/js/google.js"></script>
 </head>
 
 <body>
-    <div id="forgeViewer" class="forgeViewer">
+    <div style="width: 100%; height: 55px; position: absolute; top:0; left: 0;z-index: -2;">
+        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='48' height='48' viewBox='0 0 150 150' style="float:left; z-index: 0;">
+            <defs>
+                <radialGradient id='lg-icon-back' cx='0' cy='1' r='1.25'
+                    gradientTransform='matrix(0.66, -0.75, 0.75, 0.66, -0.75, 0.357)' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#06f' />
+                    <stop offset='1' stop-color='#00ffa8' />
+                </radialGradient>
+                <radialGradient id='lg-middle' cx='0' cy='1' r='1.25'
+                    gradientTransform='matrix(0.66, -0.75, 0.75, 0.66, -0.75, 0.33)' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#00ffdc' />
+                    <stop offset='1' stop-color='#74ff0c' />
+                </radialGradient>
+                <radialGradient id='lg-icon-front' cx='0' cy='1' r='1.25'
+                    gradientTransform='matrix(0.66, -0.75, 0.75, 0.66, -0.75, 0.33)' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#08ff00' />
+                    <stop offset='1' stop-color='#e6ff00' />
+                </radialGradient>
+                <radialGradient id='lg-fold-middle' cx='0' cy='1' r='1.25'
+                    gradientTransform='matrix(0.66, -0.75, 0.75, 0.66, -0.75, 0.33)' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#08ff00' />
+                    <stop offset='1' stop-color='#4b5300' stop-opacity='0.' />
+                </radialGradient>
+                <linearGradient id='lg-icon-fold-middle' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#e6ff61' />
+                    <stop offset='1' stop-color='#00df84' />
+                </linearGradient>
+                <linearGradient id='lg-icon-front-alt' x1='0.5' x2='0.5' y2='1' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#d6fe07' />
+                    <stop offset='1' stop-color='#00df84' />
+                </linearGradient>
+                <radialGradient id='lg-icon-fold-back' cx='0' cy='1' r='1.25'
+                    gradientTransform='matrix(0.66, -0.75, 0.75, 0.666, -0.75, 0.33)' gradientUnits='objectBoundingBox'>
+                    <stop offset='0' stop-color='#00edff' />
+                    <stop offset='1' stop-color='#5c6508' stop-opacity='0.7' />
+                </radialGradient>
+                <symbol id='icon'>
+                    <path id='Back' d='M0,0H75a25,25,0,0,1,25,25V75a25,25,0,0,1-25,25H0Z' opacity='0.75'
+                        fill='url(#lg-icon-back)' />
+                    <path id='Middle' d='M0,0H75a25,25,0,0,1,25,25V75a25,25,0,0,1-25,25H0Z' transform='translate(25 25)'
+                        opacity='0.62' fill='url(#lg-middle)' />
+                    <path id='Front' d='M0,0H75a25,25,0,0,1,25,25V75a25,25,0,0,1-25,25H0Z' transform='translate(50 50)'
+                        opacity='0.66' fill='url(#lg-icon-front)' />
+                    <path id='foldmiddle' d='M25,25v75h-25Z' transform='translate(25 25)' opacity='0.53'
+                        fill='url(#lg-fold-middle)' />
+                    <path id='foldmiddleup' d='M25,0V75L0,100Z' transform='translate(125 25) rotate(90)' opacity='0.5'
+                        fill='url(#lg-icon-fold-middle)' style='mix-blend-mode: overlay;' />
+                    <path id='foldbackup' d='M25,0V75L0,100Z' transform='translate(100 0) rotate(90)' opacity='0.5'
+                        fill='url(#lg-icon-fold-middle)' style='mix-blend-mode: darken;' />
+                    <path id='Frontalt' d='M0,60,110,0H100V50a25,25,0,0,1-25,25H0,Z' transform='translate(50 75)'
+                        opacity='0.33' fill='url(#lg-icon-front-alt)' style='mix-blend-mode: darken;' />
+                    <path id='foldback' d='M25,25V100s-.0.0-25,0C25,25,25,25,25.,25Z' opacity='0.5'
+                        fill='url(#lg-icon-fold-back' style='mix-blend-mode: darken;' />
+                </symbol>
+            </defs>
+            <use xlink:href='#icon' />
+        </svg>
+    </div>
+    <div id="forgeViewer" class="forgeViewer" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
         <div class="foldertree-wrapper">
             <div class="panel-heading" data-toggle="tooltip">Google Drive
                 <button id="loginGoogle" class="btn btn-xs btn-default" style="float:right;">
-          <img src="img/google-logo.png" height="14" sstyle="vertical-align: top;" /> Account
-        </button>
+                    <img src="img/google-logo.png" height="14" sstyle="vertical-align: top;" /> Account
+                </button>
                 <img src="/img/refresh.png" id="refreshGoogleDriveTree" style="vertical-align: top; cursor: pointer" title="Refresh Google Drive files" height="20" />
             </div>
         </div>
