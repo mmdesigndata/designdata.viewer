@@ -1,26 +1,26 @@
 {
-  "name": "model.derivative-nodejs-box.viewer",
-  "version": "1.0.0",
-  "description": "Transparent use of Model Derivative to view Box compatible files.",
-  "dependencies": {
-    "body-parser": "*",
-    "cookie-parser": "*",
-    "cookie-session": "^1.3.3",
-    "express": "*",
-    "express-session": "*",
-    "forge-apis": "0.4.3",
-    "googleapis": "^41.0.1",
-    "request": "*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/autodesk-forge/model.derivative-nodejs-box.viewer"
-  },
-  "scripts": {
-    "start": "NODE_ENV=production node start.js",
-    "dev": "node start.js",
-    "nodemon": "nodemon start.js --ignore public/"
-  },
-  "author": "Vadym Kuzin (Forge Partner Development)",
-  "license": "MIT"
+    "name": "designdata.viewer",
+    "version": "1.0.0",
+    "description": "3D Viewer from Autodesk Forge with Models saved in Google Drive.",
+    "dependencies": {
+        "body-parser": "*",
+        "cookie-parser": "*",
+        "cookie-session": "^1.3.3",
+        "express": "*",
+        "express-session": "*",
+        "forge-apis": "0.4.3",
+        "googleapis": "^41.0.1",
+        "request": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mmdesigndata/designdata.viewer"
+    },
+    "scripts": {
+        "start": "NODE_ENV=production node start.js",
+        "dev": "node start.js",
+        "nodemon": "nodemon start.js --ignore public/"
+    },
+    "author": "Vadym Kuzin (Forge Partner Development)",
+    "license": "MIT"
 }
