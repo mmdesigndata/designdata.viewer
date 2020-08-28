@@ -25,9 +25,9 @@
         },
         "GOOGLE_CALLBACK_URL": {
             "description": "Redirect URI of your Google app, required for 3-legged OAuth",
-            "value": "https://designdata3dviewer.herokuapp.com/api/google/callback/oauth"
+            "value": "https://viewer.cad.parts/api/google/callback/oauth"
         }
     },
     "website": "https://viewer.cad.parts/",
-    "success_url": "/"
+    "success_url": "https://viewer.cad.parts/"
 }
