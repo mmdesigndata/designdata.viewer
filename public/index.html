@@ -4,25 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Autodesk Forge Integration with Google Drive</title>
-    <!-- Common packages: jQuery, Bootstrap, jsTree -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/jstree.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
-    <!-- Autodesk Forge Viewer files -->
-    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
-    <!-- this project main script -->
-    <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon>
-    <script language="JavaScript" src="/js/ForgeViewer.js">
-    </script>
+    <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon> <link rel="stylesheet"
+        href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+
+    <script language="JavaScript" src="/js/ForgeViewer.js"></script>
     <script language="JavaScript" src="/js/google.js"></script>
 </head>
 
 <body>
-    <div style="width: 100%; height: 55px; position: absolute; top:0; left: 0;z-index: -2;">
-        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='48' height='48' viewBox='0 0 150 150' style="float:left; z-index: 0;">
+    <div style="width: 55px; height: 55px; position: absolute; top:0; left: 0;z-index: -2;">
+        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='48' height='48'
+            viewBox='0 0 150 150' style="float:left; z-index: 0;">
             <defs>
                 <radialGradient id='lg-icon-back' cx='0' cy='1' r='1.25'
                     gradientTransform='matrix(0.66, -0.75, 0.75, 0.66, -0.75, 0.357)' gradientUnits='objectBoundingBox'>
@@ -80,18 +79,59 @@
         </svg>
     </div>
     <div id="forgeViewer" class="forgeViewer" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
-        <div class="foldertree-wrapper">
+        <div class="foldertree-wrapper" style="width:20%;height:100%; margin-top:100px; background-color:transparent; overflow:auto;position:
+            absolute; top: 0; left: 0;">
             <div class="panel-heading" data-toggle="tooltip">Google Drive
                 <button id="loginGoogle" class="btn btn-xs btn-default" style="float:right;">
                     <img src="img/google-logo.png" height="14" sstyle="vertical-align: top;" /> Account
                 </button>
-                <img src="/img/refresh.png" id="refreshGoogleDriveTree" style="vertical-align: top; cursor: pointer" title="Refresh Google Drive files" height="20" />
+                <img src="/img/refresh.png" id="refreshGoogleDriveTree" style="vertical-align: top; cursor: pointer"
+                    title="Refresh Google Drive files" height="20" />
             </div>
-        </div>
-        <div id="myGoogleDriveFiles" class="foldertree">
+            <div id="myGoogleDriveFiles" class="foldertree">
+            </div>
         </div>
     </div>
 
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autodesk Forge Integration with Google Drive</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/jstree.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+
+    <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon> <script language="JavaScript"
+        src="/js/ForgeViewer.js">
+    </script>
+    <script language="JavaScript" src="/js/google.js"></script>
+</head>
+
+<body>
+    <div id="forgeViewer" class="forgeViewer">
+        <div class="panel panel-default">
+            <div class="panel-heading" data-toggle="tooltip">Google Drive
+                <button id="loginGoogle" class="btn btn-xs btn-default" style="float:right;">
+                    <img src="img/google-logo.png" height="14" sstyle="vertical-align: top;" /> Account
+                </button>
+                <img src="/img/refresh.png" id="refreshGoogleDriveTree" style="vertical-align: top; cursor: pointer"
+                    title="Refresh Google Drive files" height="20" />
+            </div>
+            <div id="myGoogleDriveFiles" class="foldertree" style="width:20%;height:=100%; margin-top:100px">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
 
 </html>
